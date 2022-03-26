@@ -6,7 +6,7 @@ const sabritaController = require('../controllers/sabritas.controller');
 
 router.get('/', sabritaController.getSabritas);
 router.post('/', sabritaController.addSabrita);
-// router.put('/', );
+// router.put('/:id', sabritaController.putSabrita);
 router.delete('/:id', sabritaController.deleteSabrita);
 
 module.exports = router;
