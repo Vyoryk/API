@@ -19,16 +19,16 @@ sabritaController.deleteSabrita = async (req, res) => {
     res.json({status: "Sabrita eliminada"});
 }
 
-// sabritaController.putSabrita = async (req,res) =>{
-//     const {id} = req.params;
-//     const sabrita = {
-//         brand: req.body.brand,
-//         name: req.body.name,
-//         price: req.body.price,
-//         content: req.body.content
-//     };
-//     await sabritaModel.findByIdAndUpdate(id, {$set:sabrita}, {new:true});
-//     res.json({status: 'Sabrita actualizada'});
-// };
+sabritaController.putSabrita = async (req,res) =>{
+    const {id} = req.params;
+    const sabrita = {
+        brand: req.body.brand,
+        name: req.body.name,
+        price: req.body.price,
+        content: req.body.content
+    };
+    await sabritaModel.findByIdAndUpdate(id, {$set:sabrita}, {new:true});
+    res.json({status: 'Sabrita actualizada'});
+};
 
 module.exports = sabritaController;
